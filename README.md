@@ -8,6 +8,7 @@ At first the algorithm, I opened the `allow_list.txt`file. First, I assigned thi
 ![image](https://github.com/user-attachments/assets/0fa27a31-991e-4380-85c2-f006a0b922de)
 
 Then, I utilize a `with` statement to open the file:
+
 ![image](https://github.com/user-attachments/assets/0b803a47-c5b1-4e90-b0f6-efbf0fb810ac)
 
 In my algorithm, the use of a `with` statement with the `.open()` function in read more serve to open the allow list file for the purpose of reading it. The purpose of opening the file is to allow me to access the IP addresses stored in the purpose lf reading it. The reason for opening the file is to allow me to access the content aka the IP addresses stored in the allow list file. The `with` keyword will help manage the resources by closing the file after exiting with the `with` statement. In the code `with open(import_fiel, "r") as file:` the open() function has two parameters. The first identifies teh file to import, and thenn the second indicates what I want to do with the file. In this case, `"r"` indicates that I want to read it. The code also uses the `as` keyword to assign a var named `file`: `file` stores the output of the `.open()` function while I work within the `with` statement.
