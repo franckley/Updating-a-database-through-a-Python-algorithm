@@ -40,3 +40,6 @@ The `for` loop in Python repeats code for a specified sequence. The overall purp
 
 A algorithm requires the removal of any IP address from the allow list, `ip_addresses`, that is also contained in the variable `remove_list`. Because there were not any duplicates in `ip_addresses`, I was able to use the following code to do the following:
 ![image](https://github.com/user-attachments/assets/5388cb3b-911f-4098-b958-ef0b2ec6e9a2)
+
+First, within my `for` loop, I created a conditional that evaluated whether or not the loop variable `element` was found in the `ip_addresses` list. I did this because applying `.remove()` to elements that were not found in `ip_addresses`.
+d3d3d3d
