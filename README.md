@@ -42,4 +42,23 @@ A algorithm requires the removal of any IP address from the allow list, `ip_addr
 ![image](https://github.com/user-attachments/assets/5388cb3b-911f-4098-b958-ef0b2ec6e9a2)
 
 First, within my `for` loop, I created a conditional that evaluated whether or not the loop variable `element` was found in the `ip_addresses` list. I did this because applying `.remove()` to elements that were not found in `ip_addresses`.
-d3d3d3d
+
+## Update the file with the revised list of IP addresseses
+
+As a final step in my algorithm, I needed to update the allow list file with the revised list of IP addresses. To do it, I needed first to convert the list back into a string. So the use of the `.join()` method for this:
+
+![image](https://github.com/user-attachments/assets/4539d42b-8445-4cc4-9c9c-742356150109)
+
+The `.join()` method combines all items in an iterable into a string format. The `.join()` method is applied to a string containing characters that will separate the elements in the iterable once joined into a string. IN this algorithm, I used the `.join()` method to create a string from the list `ip_addresses` so that I could pass it in as an argument to the .write() method when writing to the file "`allow_list.txt`". I used the string ("`\n`") as the separator to instruct Python to place each element on a new line.
+
+Then, I used another `with` statement and the `.write()` method to update the file:
+
+![image](https://github.com/user-attachments/assets/12292894-1d2b-49c4-b6a5-f2b419afb9a1)
+
+This time, I used a second argument of "`w`" with the `open()` function in my with statement. This argument indicates that I want to open a file to write over its contents. When using this argument "`w`", I can call the `.write()` function in the body of the `with` statement. The `.write()` function writes string data to a specified file and replacses any existing file content.
+
+In this case I wanted to write the updated allow list as a string to the file "`allow_list.txt`". This way, the restricted content will no longer be accessible to any IP addressews that were removed from the allow list. To rewrite the file, I appended the `.write()` function to the file object `file` that I identified in the with statement. I passed in the `ip_addresses` variable as the argument to specify that the contents of the file specified in the with statement should be replaced with the data in this variable.
+
+## Summary 
+
+The purpose behind the creation of this algorithm is to remove IP addresses identified in a `remove_list` variable from the "`allow_list`" file of approved IP addresses. This algorithm involved opening the file, converting it to a string for it to be read, and then converting this string to a list stored in the variable `ip_addresses`. I then iterated through the ip_addresses list. If it was, I applied the `.remove()` method to it to remove the element form `ip_addresses`. After this, I used the `.join()` method to it to convert the `ip_address` back into a string so that I could write over the contents of the "`allow_list.txt `" file with the revised list of IP addresses.
